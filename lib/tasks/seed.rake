@@ -1,6 +1,8 @@
 # frozen_string_literal: true
+
+Object.send(:include, Seedbank::DSL)
+
 namespace :db do
-  using Seedbank::DSL
   override_dependency = ['db:seed:common']
 
   namespace :seed do
